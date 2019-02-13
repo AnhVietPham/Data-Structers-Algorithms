@@ -16,7 +16,13 @@ const large = new Array(1000000).fill('nemo');
 //     }
 // }
 
-// findNemo(nemo);
+// findNemo(large); // O(n) -> Linear Time
+
+const boxes = [0,1,2,3,4,5];
+function logFirstTwoBoxes(boxes){ 
+    console.log(boxes[0]); // O[1] --> Constant Time
+    console.log(boxes[1]); // O[1] --> Constant Time
+}
 
 function findNemo2(array){
     let t0 = performance.now();
@@ -31,3 +37,5 @@ function findNemo2(array){
 }
 
 findNemo2(fish);
+
+logFirstTwoBoxes(boxes); // O[2]
