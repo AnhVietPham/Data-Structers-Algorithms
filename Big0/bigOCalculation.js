@@ -13,7 +13,7 @@ function funChallenge(input) {
 }
 
 // Big O(3 + 4n) 
-// Remove constants --> Big O(4n)
+// Remove constants --> Big O(n)
 
 
 // Example 2
@@ -37,3 +37,4 @@ function anotherFunChallenge(input) {
 }
 
 //BIG O(4 + 7n)
+// Remove constant --> BIG O[n]
