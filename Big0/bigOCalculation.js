@@ -86,6 +86,26 @@ function logAllPairsOfArray(array) {
     }
 }
 
-logAllPairsOfArray(boxes)
-
+//logAllPairsOfArray(boxes)
 // Big O(n * n) --> O(n^2)
+
+// Example 5
+function printAllNumberThenAllPairSums(numbers) {
+
+    console.log("There are the number");
+    numbers.forEach(number => {
+        console.log(number);
+    });
+
+    console.log("And There are their sums");
+    numbers.forEach(firstNumber => {
+        numbers.forEach(secondNumber => {
+            console.log(firstNumber + secondNumber);
+        });
+    });
+}
+
+printAllNumberThenAllPairSums([1, 2, 3, 4, 5]);
+
+// Big O(n + n*2)
+// Rule drop non dominants --> O(n*2)
