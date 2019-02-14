@@ -105,7 +105,36 @@ function printAllNumberThenAllPairSums(numbers) {
     });
 }
 
-printAllNumberThenAllPairSums([1, 2, 3, 4, 5]);
+//printAllNumberThenAllPairSums([1, 2, 3, 4, 5]);
 
 // Big O(n + n*2)
 // Rule drop non dominants --> O(n*2)
+
+// Example Big O(n!)
+function nFacRuntimeFunc(number) {
+    for (let i = 0; i < number; i++) {
+        console.log(nFacRuntimeFunc(number - 1));
+    }
+}
+
+nFacRuntimeFunc(3)
+/* 
+    n = 3 --> O(3)
+    * 0 -> nFacRuntimeFunc(2) => n = 2 --> O(2) 
+        + 0 -> nFacRuntimeFunc(1) => n = 1 --> O(1)
+            * 0 ->  nFacRuntimeFunc(0)
+        + 1 -> nFacRuntimeFunc(1) => n = 1 --> O(1)
+            * 0 -> nFacRuntimeFunc(0)
+    * 1 -> nFacRuntimeFunc(2) => n = 2 --> O(2) 
+        + 0 -> nFacRuntimeFunc(1) => n = 1 --> O(1)
+            * 0 ->  nFacRuntimeFunc(0)
+        + 1 -> nFacRuntimeFunc(1) => n = 1 --> O(1)
+            * 0 -> nFacRuntimeFunc(0)
+    * 2 -> nFacRuntimeFunc(2) => n = 2 --> O(2) 
+        + 0 -> nFacRuntimeFunc(1) => n = 1 --> O(1)
+            * 0 ->  nFacRuntimeFunc(0)
+        + 1 -> nFacRuntimeFunc(1) => n = 1 --> O(1)
+            * 0 -> nFacRuntimeFunc(0)
+    ==> 3.2.1.1 = 3!
+    General Big O(n!)
+*/
