@@ -26,6 +26,7 @@ function containsCommonItem(arr1, arr2) {
 
 //console.log(containsCommonItem(array1,array2));
 // O(a * b)
+// O(1) Space complexity
 
 // Create object in Javascript
 const person = {
@@ -56,6 +57,7 @@ function containsCommonItem2(arr1, arr2) {
 }
 // console.log(containsCommonItem2(array1, array2));
 // O(a + b)
+// O(a) space complexity
 
 // Solution 3
 function containsCommonItem3(arr1, arr2) {
