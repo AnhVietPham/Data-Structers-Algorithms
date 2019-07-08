@@ -99,6 +99,14 @@ class LinkedList {
         }
         return currentNode;
     }
+
+    remove(index) {
+        const nodeAtPreIndex = this.traversalToIndex(index - 1);
+        const holdingPointer = nodeAtPreIndex.next;
+        nodeAtPreIndex.next = holdingPointer.next;
+        this.length--;
+        return this;
+    }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -109,4 +117,6 @@ myLinkedList.insert(4, 1995);
 myLinkedList.insert(3, 19954);
 myLinkedList.insert(5, 1995456);
 myLinkedList.insert(6, 0000);
+console.log(myLinkedList.printLinkedList());
+myLinkedList.remove(7);
 console.log(myLinkedList.printLinkedList());
