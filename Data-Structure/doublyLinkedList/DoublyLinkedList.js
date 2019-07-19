@@ -80,14 +80,31 @@ class DoublyLinkedList {
         this.length--;
         return this;
     }
+
+    reverse() {
+        const arrayValue = [];
+        let currentNode = this.tail;
+        while (currentNode) {
+            arrayValue.push(currentNode.value);
+            currentNode = currentNode.prev;
+        }
+        return arrayValue;
+    }
 }
 
-const myDoublyLinkedList = new DoublyLinkedList(1);
+const myDoublyLinkedList = new DoublyLinkedList(0);
+// myDoublyLinkedList.append(2);
+// myDoublyLinkedList.append(3);
+// myDoublyLinkedList.append(4);
+// myDoublyLinkedList.insert(100, 550);
+// myDoublyLinkedList.preAppend(44);
+// myDoublyLinkedList.insert(3, 99);
+// myDoublyLinkedList.remove(3);
+myDoublyLinkedList.append(1);
 myDoublyLinkedList.append(2);
 myDoublyLinkedList.append(3);
 myDoublyLinkedList.append(4);
-myDoublyLinkedList.insert(100,550);
-myDoublyLinkedList.preAppend(44);
-myDoublyLinkedList.insert(3,99);
-myDoublyLinkedList.remove(3);
+myDoublyLinkedList.append(5);
+myDoublyLinkedList.append(6);
 console.log(myDoublyLinkedList.printDoublyLinkedList());
+console.log(myDoublyLinkedList.reverse());
