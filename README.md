@@ -10,3 +10,28 @@ This project will use JavaScript.
 ### Technical:
 #### Big O notation.
 #### Data structures: 
+* Arrays
+* Hash Tables
+* Singly Linked Lists
+* Doubly Linked Lists
+* Queues
+* Stacks
+* Trees (BST, AVL Trees, Red Black Trees, Binary Heaps)
+* Tries
+* Graphs.
+#### Algorithms: 
+* Recursion
+* Sorting
+* Searching
+* Tree Traversal
+* Breadth First Search
+* Depth First Search
+* Dynamic Programming
+### Non Technical:
+- How to get more interviews
+- What to do during interviews
+- What do do after the interview
+- How to answer interview questions
+- How to handle offers
+- How to negotiate your salary
+- How to get a raise
