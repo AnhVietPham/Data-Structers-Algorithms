@@ -27,14 +27,6 @@ This project will use JavaScript.
 * Breadth First Search
 * Depth First Search
 * Dynamic Programming
-#### Non Technical:
-- How to get more interviews
-- What to do during interviews
-- What do do after the interview
-- How to answer interview questions
-- How to handle offers
-- How to negotiate your salary
-- How to get a raise
 ## Who this project is for:
 * Any engineer, developer, programmer, who wants to improve their interviewing skills
 * Anyone interested in improving their coding skills.
