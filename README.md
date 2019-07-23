@@ -3,9 +3,8 @@
 * This project will use JavaScript.
 ## Description.
 ### Here's what's included in this project:
-#### Technical:
-##### Big O notation.
-##### Data structures: 
+#### Big O notation.
+#### Data structures: 
 * Arrays
 * Hash Tables
 * Singly Linked Lists
@@ -15,7 +14,7 @@
 * Trees (BST, AVL Trees, Red Black Trees, Binary Heaps)
 * Tries
 * Graphs.
-##### Algorithms: 
+#### Algorithms: 
 * Recursion
 * Sorting
 * Searching
