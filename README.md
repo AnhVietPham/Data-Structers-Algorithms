@@ -1,6 +1,6 @@
 # Data Structures + Algorithms
 * This project learn, implement, and use different Data Structures, Algorithms.
-* This project will use #JavaScript.
+* This project will use JavaScript.
 ## Description.
 ### Here's what's included in this project:
 #### Technical:
