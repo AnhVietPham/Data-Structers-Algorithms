@@ -1,15 +1,10 @@
 # Data Structures + Algorithms
-This project learn, implement, and use different Data Structures, Algorithms.
-## Requirements
-* No experience with data structures or algorithms needed.
-* Basic understanding of one programming language.
-* No previous computer science knowledge necessary.
+* This project learn, implement, and use different Data Structures, Algorithms.
+* This project will use JavaScript.
 ## Description.
-This project will use JavaScript.
 ### Here's what's included in this project:
-#### Technical:
-##### Big O notation.
-##### Data structures: 
+#### Big O notation.
+#### Data structures: 
 * Arrays
 * Hash Tables
 * Singly Linked Lists
@@ -19,7 +14,7 @@ This project will use JavaScript.
 * Trees (BST, AVL Trees, Red Black Trees, Binary Heaps)
 * Tries
 * Graphs.
-##### Algorithms: 
+#### Algorithms: 
 * Recursion
 * Sorting
 * Searching
