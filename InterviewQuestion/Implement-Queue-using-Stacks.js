@@ -40,6 +40,57 @@ class Stack {
     }
 }
 
-class SpecicalQueue{
+class SpecicalQueue {
+    constructor() {
+        this.firstStack = new Stack();
+        this.secondStack = new Stack();
+    }
 
+
+    enqueue(value) {
+        if (!this.firstStack.top) {
+            this.firstStack.push(value)
+            return this.firstStack;
+        }
+
+        while (this.firstStack.top != null) {
+            this.secondStack.push(this.firstStack.peek().value);
+            this.firstStack.pop();
+        }
+
+        this.firstStack.push(value);
+
+        while (this.secondStack.top != null) {
+            this.firstStack.push(this.secondStack.peek().value)
+            this.secondStack.pop();
+        }
+        return this.firstStack;
+    }
+
+    printSpecialQueue() {
+        const arrayValue = [];
+        while (this.firstStack.top != null) {
+            arrayValue.push(this.firstStack.peek().value);
+            this.firstStack.pop();
+        }
+        return arrayValue;
+    }
+
+    dequeue() {
+        this.firstStack.pop();
+    }
+
+    peek() {
+        return this.firstStack.peek().value
+    }
 }
+
+const mySpecialQueue = new SpecicalQueue();
+mySpecialQueue.enqueue("Anh Viet Pham 0");
+mySpecialQueue.enqueue("Anh Viet Pham 1");
+mySpecialQueue.enqueue("Anh Viet Pham 2");
+mySpecialQueue.enqueue("Anh Viet Pham 3");
+mySpecialQueue.enqueue("Anh Viet Pham 4");
+mySpecialQueue.dequeue()
+mySpecialQueue.peek();
+console.log(mySpecialQueue.peek());

@@ -38,10 +38,21 @@ class Stack {
         this.length++;
         return this;
     }
+
+    printStack(){
+        const arrayValue = [];
+        while(this.top != null){
+            arrayValue.push(this.peek().value);
+            this.pop();
+        }
+        return arrayValue;
+    }
 }
 
 const myStack = new Stack();
-myStack.push('Google');
-myStack.push('Udemy');
-myStack.push('Facebook');
-console.log(myStack.peek());
+myStack.push("Anh Viet Pham 0");
+myStack.push("Anh Viet Pham 1");
+myStack.push("Anh Viet Pham 2");
+myStack.push("Anh Viet Pham 3");
+myStack.push("Anh Viet Pham 4");
+console.log(myStack.printStack());
