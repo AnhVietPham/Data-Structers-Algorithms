@@ -97,9 +97,11 @@ class BinarySearchTree {
                     if ((!leftMostParent.right) || (!leftMostParent.right && !leftMostParent.left)) {
                         if (currentNode.value < parentNode.value) {
                             parentNode.left = leftMostParent;
+                            leftMostParent.right = currentNode.right;
                             return this;
                         } else {
                             parentNode.right = leftMostParent;
+                            leftMostParent.right = currentNode.right;
                             return this;
                         }
                     } else if (leftMostParent.right) {
@@ -108,14 +110,14 @@ class BinarySearchTree {
                             if (currentNode.value < parentNode.value) {
                                 parentNode.left = leftMostChild;
                                 leftMostParent.right = leftMostChild.left;
-                                parentNode.left.left = leftMostParent;
-                                parentNode.left.right = currentNode.right;
+                                leftMostChild.left = leftMostParent;
+                                leftMostChild.right = currentNode.right;
                                 return this
                             } else {
                                 parentNode.right = leftMostChild;
                                 leftMostParent.right = leftMostChild.left;
-                                parentNode.right.left = leftMostParent;
-                                parentNode.right.right = currentNode.right;
+                                leftMostChild.left = leftMostParent;
+                                leftMostChild.right = currentNode.right;
                                 return this;
                             }
                         } else if (leftMostChild.right) {
@@ -127,14 +129,19 @@ class BinarySearchTree {
                                 subCurrentOfRightNodeOfLeftMostChild = subCurrentOfRightNodeOfLeftMostChild.right;
                             }
                             leftMostChild.right = subCurrentOfRightNodeOfLeftMostChild;
+                            if (!currentRightNodeOfLeftMostChild.left) {
+                                leftMostChild.left = null;
+                            }
 
                             if (currentNode.value < parentNode.value) {
                                 parentNode.left = currentRightNodeOfLeftMostChild;
-                                currentRightNodeOfLeftMostChild.left = leftMostParent;
+                                parentNode.left.right = currentNode.right;
+                                parentNode.left.left = leftMostParent;
                                 return this;
                             } else {
                                 parentNode.right = currentRightNodeOfLeftMostChild;
-                                currentRightNodeOfLeftMostChild.left = leftMostParent;
+                                parentNode.right.right = currentNode.right;
+                                parentNode.right.left = leftMostParent;
                                 return this;
                             }
                         }
@@ -164,8 +171,10 @@ tree.insert(68)
 tree.insert(80)
 tree.insert(6)
 tree.insert(85)
+tree.insert(83)
 tree.insert(87)
-tree.remove(88)
+tree.insert(100)
+tree.remove(65)
 console.log(JSON.stringify(traverse(tree.root)));
 function traverse(node) {
     const tree = { value: node.value };
