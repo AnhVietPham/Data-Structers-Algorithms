@@ -5,7 +5,7 @@ var sumRecursion = function (value) {
     return sumRecursion(value - 1) + value;
 }
 
-var sumRecursionReduction = function(value) {
+var sumRecursionReduction = function (value) {
     var sum = 0;
     for (var i = 0; i <= value; i++) {
         sum += i
@@ -47,6 +47,18 @@ var fibonacyRecursion = function (value) {
     return fibonacyRecursion(value - 1) + fibonacyRecursion(value - 2);
 }
 
+var fibonancyRecurionTail = function (value, n1, n2) {
+    if (value == 0) {
+        return n1;
+    }
+
+    if (value == 1) {
+        return n2;
+    }
+
+    return fibonancyRecurionTail(value - 1, n2, n1 + n2);
+}
+
 // Calculate sum n 
 // console.log(sumRecursion(10))
 // console.log(sumRecursionReduction(10))
@@ -59,6 +71,7 @@ var fibonacyRecursion = function (value) {
 // }
 
 // Calculate fibonancy recursion
-for (var i = 0; i < 5; i++) {
-    console.log(fibonacyRecursion(i));
-}
+// for (var i = 0; i < 5; i++) {
+//     console.log(fibonacyRecursion(i));
+// }
+console.log(fibonancyRecurionTail(4, 0, 1));
