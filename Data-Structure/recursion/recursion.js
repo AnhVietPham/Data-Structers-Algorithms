@@ -13,5 +13,13 @@ var sumRecursionReduction = function (value) {
     return sum;
 }
 
+var sumRecursionTail = function (value, x = 0) {
+    if (value == 1) {
+        return value + x;
+    }
+    return sumRecursionTail(value - 1, value + x);
+}
+
 console.log(sumRecursion(10))
 console.log(sumRecursionReduction(10))
+console.log(sumRecursionTail(10))
