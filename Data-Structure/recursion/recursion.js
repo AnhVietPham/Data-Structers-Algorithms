@@ -59,6 +59,14 @@ var fibonancyRecurionTail = function (value, n1, n2) {
     return fibonancyRecurionTail(value - 1, n2, n1 + n2);
 }
 
+var sumLinearRecurion = function(value){
+    if (value == 0){
+        return 0;
+    }
+
+    return sumLinearRecurion(value - 1) + value;
+}
+
 // Calculate sum n 
 // console.log(sumRecursion(10))
 // console.log(sumRecursionReduction(10))
@@ -75,3 +83,4 @@ var fibonancyRecurionTail = function (value, n1, n2) {
 //     console.log(fibonacyRecursion(i));
 // }
 console.log(fibonancyRecurionTail(4, 0, 1));
+console.log(sumLinearRecurion(3))
