@@ -1,11 +1,14 @@
-var sumRecursion = function (value) {
+/**
+ * Linear Recursion 
+ */ 
+var sumLinearRecursion = function (value) {
     if (value == 0) {
         return 0;
     }
     return sumRecursion(value - 1) + value;
 }
 
-var sumRecursionReduction = function (value) {
+var sumLinearRecursionReduction = function (value) {
     var sum = 0;
     for (var i = 0; i <= value; i++) {
         sum += i
@@ -13,7 +16,7 @@ var sumRecursionReduction = function (value) {
     return sum;
 }
 
-var sumRecursionTail = function (value, x = 0) {
+var sumLinearRecursionTail = function (value, x = 0) {
     if (value == 1) {
         return value + x;
     }
@@ -22,6 +25,9 @@ var sumRecursionTail = function (value, x = 0) {
 
 // 1 1 2 3 5 8 13 20 32
 
+/**
+ * Binary Recursion 
+ */
 var fibonacyReduction = function (value) {
     var n1 = 0;
     var n2 = 1;
@@ -59,14 +65,6 @@ var fibonancyRecurionTail = function (value, n1, n2) {
     return fibonancyRecurionTail(value - 1, n2, n1 + n2);
 }
 
-var sumLinearRecurion = function(value){
-    if (value == 0){
-        return 0;
-    }
-
-    return sumLinearRecurion(value - 1) + value;
-}
-
 // Calculate sum n 
 // console.log(sumRecursion(10))
 // console.log(sumRecursionReduction(10))
@@ -76,11 +74,12 @@ var sumLinearRecurion = function(value){
 // // Calculate fibonacy recursion reduction
 // for (var i = 0; i < 5; i++) {
 //     console.log(fibonacyReduction(i));
-// }
+//
 
 // Calculate fibonancy recursion
 // for (var i = 0; i < 5; i++) {
 //     console.log(fibonacyRecursion(i));
 // }
-console.log(fibonancyRecurionTail(4, 0, 1));
-console.log(sumLinearRecurion(3))
+// console.log(fibonancyRecurionTail(4, 0, 1));
+console.log(sumLinearRecurion(5))
+console.log(sumLinerRecursionTail(5))
